@@ -30,7 +30,7 @@
   
   <script>
   import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-  import { app } from "../firebaseConfig"; // Asumiendo que tienes la configuración de Firebase exportada
+  import { app } from "../firebaseConfig"; 
   
   export default {
     data() {
@@ -43,13 +43,12 @@
     methods: {
       async handleSignUp() {
         const auth = getAuth(app);
-        this.errorMessage = ""; // Limpiar cualquier error previo
+        this.errorMessage = ""; 
   
         try {
           await createUserWithEmailAndPassword(auth, this.email, this.password);
-          this.$router.push("/home"); // Redirige al usuario a la página de inicio después de registrarse
+          this.$router.push("/home");
         } catch (error) {
-          // Mostrar el error si ocurre
           this.errorMessage = error.message;
         }
       },

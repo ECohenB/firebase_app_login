@@ -1,4 +1,3 @@
-<!-- src/App.vue -->
 <template>
   <div id="app">
     <router-view />
@@ -12,5 +11,5 @@ export default {
 </script>
 
 <style>
-/* Puedes agregar estilos generales aquí */
+
 </style>

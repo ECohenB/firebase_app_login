@@ -29,18 +29,16 @@
     },
     methods: {
       async login() {
-        const auth = getAuth();  // Obtén la instancia de autenticación de Firebase
-        const router = useRouter();  // Usar router para redirigir al home
+        const auth = getAuth();  
+        const router = useRouter(); 
   
         try {
-          // Intentar iniciar sesión con el correo y la contraseña proporcionados
+          
           await signInWithEmailAndPassword(auth, this.email, this.password);
           
-          // Si el inicio de sesión es exitoso, redirigir a la página Home
           router.push("/home");
         } catch (error) {
           console.error("Error de login:", error.message);
-          // Puedes mostrar un mensaje de error si es necesario
           alert("Error de inicio de sesión. Por favor, revisa tus credenciales.");
         }
       }
@@ -49,6 +47,5 @@
   </script>
   
   <style scoped>
-  /* Agrega estilos específicos para el componente Login */
   </style>
   

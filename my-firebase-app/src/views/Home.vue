@@ -1,4 +1,3 @@
-<!-- src/views/Home.vue -->
 <template>
     <div>
       <h1>Welcome to Home</h1>
@@ -13,6 +12,6 @@
   </script>
   
   <style scoped>
-  /* Estilos específicos para la vista Home */
+
   </style>
   

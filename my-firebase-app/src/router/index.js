@@ -12,12 +12,12 @@ const routes = [
     component: Home, 
     beforeEnter: (to, from, next) => {
       const auth = getAuth();
-      const user = auth.currentUser;  // Obtén el usuario actual de Firebase
+      const user = auth.currentUser;  
 
       if (user) {
-        next();  // Si el usuario está autenticado, permite el acceso
+        next();  
       } else {
-        next('/login');  // Si el usuario no está autenticado, redirige al login
+        next('/login');  
       }
     }
   }
